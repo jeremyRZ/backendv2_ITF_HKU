@@ -1,9 +1,21 @@
 package itf.hku.backend.controller;
 
 
-import org.springframework.web.bind.annotation.RequestMapping;
+import com.alibaba.fastjson.JSONObject;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import itf.hku.backend.common.*;
+import itf.hku.backend.entity.User;
+import itf.hku.backend.mapper.UserMapper;
+import itf.hku.backend.pojo.UserKmmy;
+import itf.hku.backend.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 import org.springframework.stereotype.Controller;
+
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * <p>
@@ -13,9 +25,81 @@ import org.springframework.stereotype.Controller;
  * @author JeremyZhao
  * @since 2021-04-20
  */
-@Controller
-@RequestMapping("/user")
+/**
+ * <p>
+ * 用户表 前端控制器
+ * </p>
+ *
+ * @author 朱少杰
+ * @since 2020-06-04
+ */
+@RestController
+@RequestMapping("/api/user")
 public class UserController {
 
+    @Autowired
+    private UserService userService;
+
+    @PostMapping("login")
+    @ResponseBody
+    public OutputObject login(@RequestBody UserKmmy user){
+        QueryWrapper<UserKmmy> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq(user.getUname() != null, "uname", user.getUname());
+        UserKmmy users = userService.getOne(queryWrapper);
+        // 密码校验
+        String s = (MD5Utils.md5(user.getPasswd()+users.getSalt()));
+        if (users.getPasswd().equals(s)==false){
+            return new OutputObject(ReturnCode.FAIL,"密码不正确",user);
+        }
+        queryWrapper.in(user.getPasswd() != null, "passwd", s);
+        // 通过用户名从数据库中查询出该用户
+        if (users == null){
+            return new OutputObject(ReturnCode.FAIL,"用户不存在",user);
+        }
+        String token = TokenUtil.sign(new UserKmmy(user.getUname(),s));
+        HashMap<String,Object> hs =new HashMap<>();
+        hs.put("token",token);
+        hs.put("userid",users.getUserid());
+        return new OutputObject(String.valueOf(HttpStatus.OK.value()),"Login Success",hs);
+    }
+
+    /**
+     * 用户注册
+     * @param user
+     * @return
+     */
+    @PostMapping("addUser")
+    @ResponseBody
+    public ResultObj addUser(@RequestBody UserKmmy user) {
+        try {
+            // 查询用户名是否存在
+            QueryWrapper<UserKmmy> queryWrapper = new QueryWrapper<>();
+            queryWrapper.eq("uname",user.getUname());
+            UserKmmy users = userService.getOne(queryWrapper);
+            if (users!=null){
+                return ResultObj.THE_USER_ALREADY_EXISTS;
+            }
+            // 设置盐
+            String salt = UUIDUtils.getUUID();
+            user.setSalt(salt);
+            // 设置密码加密
+            String s = MD5Utils.md5(user.getPasswd()+salt);
+            // 设置用户默认头像
+            user.setPasswd(s);
+            user.setHeadImg(ReturnCode.DEFAULT_IMG_USER);
+            userService.save(user);
+            return ResultObj.ADD_SUCCESS;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResultObj.ADD_ERROR;
+        }
+    }
+    @RequestMapping("/index")
+    public String index() {
+        return "Hello World! 欢迎来到 spring boot application";
+    }
+
 }
+
+
 
