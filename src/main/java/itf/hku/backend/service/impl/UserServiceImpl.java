@@ -1,8 +1,7 @@
 package itf.hku.backend.service.impl;
 
-import itf.hku.backend.entity.User;
 import itf.hku.backend.mapper.UserMapper;
-import itf.hku.backend.pojo.UserKmmy;
+import itf.hku.backend.entity.User;
 import itf.hku.backend.service.UserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
@@ -30,6 +29,6 @@ import org.springframework.stereotype.Service;
  * @since 2020-06-04
  */
 @Service
-public class UserServiceImpl extends ServiceImpl<UserMapper, UserKmmy> implements UserService {
+public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
 
 }

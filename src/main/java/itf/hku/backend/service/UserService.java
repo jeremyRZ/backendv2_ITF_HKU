@@ -1,11 +1,7 @@
 package itf.hku.backend.service;
 
-import com.baomidou.mybatisplus.core.conditions.Wrapper;
-import itf.hku.backend.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
-import itf.hku.backend.pojo.UserKmmy;
-
-import java.util.List;
+import itf.hku.backend.entity.User;
 
 /**
  * <p>
@@ -29,6 +25,6 @@ import java.util.List;
  * @author 朱少杰
  * @since 2020-06-04
  */
-public interface UserService extends IService<UserKmmy> {
+public interface UserService extends IService<User> {
 
 }

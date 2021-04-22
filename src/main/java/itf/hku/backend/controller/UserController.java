@@ -1,21 +1,15 @@
 package itf.hku.backend.controller;
 
 
-import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import itf.hku.backend.common.*;
 import itf.hku.backend.entity.User;
-import itf.hku.backend.mapper.UserMapper;
-import itf.hku.backend.pojo.UserKmmy;
 import itf.hku.backend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-import org.springframework.stereotype.Controller;
-
 import java.util.HashMap;
-import java.util.List;
 
 /**
  * <p>
@@ -42,10 +36,10 @@ public class UserController {
 
     @PostMapping("login")
     @ResponseBody
-    public OutputObject login(@RequestBody UserKmmy user){
-        QueryWrapper<UserKmmy> queryWrapper = new QueryWrapper<>();
+    public OutputObject login(@RequestBody User user){
+        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq(user.getUname() != null, "uname", user.getUname());
-        UserKmmy users = userService.getOne(queryWrapper);
+        User users = userService.getOne(queryWrapper);
         // 密码校验
         String s = (MD5Utils.md5(user.getPasswd()+users.getSalt()));
         if (users.getPasswd().equals(s)==false){
@@ -56,11 +50,12 @@ public class UserController {
         if (users == null){
             return new OutputObject(ReturnCode.FAIL,"用户不存在",user);
         }
-        String token = TokenUtil.sign(new UserKmmy(user.getUname(),s));
+        String token = TokenUtil.sign(new User(user.getUname(),s));
         HashMap<String,Object> hs =new HashMap<>();
         hs.put("token",token);
         hs.put("userid",users.getUserid());
-        return new OutputObject(String.valueOf(HttpStatus.OK.value()),"Login Success",hs);
+//        return new OutputObject(String.valueOf(HttpStatus.OK.value()),"Login Success",hs);
+        return new OutputObject(ReturnCode.SUCCESS,"Login Success",hs);
     }
 
     /**
@@ -70,12 +65,12 @@ public class UserController {
      */
     @PostMapping("addUser")
     @ResponseBody
-    public ResultObj addUser(@RequestBody UserKmmy user) {
+    public ResultObj addUser(@RequestBody User user) {
         try {
             // 查询用户名是否存在
-            QueryWrapper<UserKmmy> queryWrapper = new QueryWrapper<>();
+            QueryWrapper<User> queryWrapper = new QueryWrapper<>();
             queryWrapper.eq("uname",user.getUname());
-            UserKmmy users = userService.getOne(queryWrapper);
+            User users = userService.getOne(queryWrapper);
             if (users!=null){
                 return ResultObj.THE_USER_ALREADY_EXISTS;
             }

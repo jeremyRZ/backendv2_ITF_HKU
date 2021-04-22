@@ -4,7 +4,7 @@ import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
-import itf.hku.backend.pojo.UserKmmy;
+import itf.hku.backend.entity.User;
 
 import java.util.Date;
 
@@ -18,7 +18,7 @@ public class TokenUtil {
      * @param user
      * @return
      */
-    public static String sign(UserKmmy user){
+    public static String sign(User user){
         String token = null;
         try {
             Date expiresAt = new Date(System.currentTimeMillis() + EXPIRE_TIME);

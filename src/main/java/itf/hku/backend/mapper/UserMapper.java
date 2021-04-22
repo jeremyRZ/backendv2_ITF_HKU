@@ -1,8 +1,6 @@
 package itf.hku.backend.mapper;
-import itf.hku.backend.pojo.UserKmmy;
-import org.apache.ibatis.annotations.Param;
-
 import itf.hku.backend.entity.User;
+
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
@@ -22,6 +20,6 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 //
 //}
 
-public interface UserMapper extends BaseMapper<UserKmmy> {
+public interface UserMapper extends BaseMapper<User> {
 
 }
