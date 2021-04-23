@@ -30,7 +30,7 @@ public class Material implements Serializable {
     /**
      *
      */
-    @TableField("picPath")
-    private String picpath;
+    @TableField("picName")
+    private String picname;
 
 }

@@ -5,10 +5,7 @@ import org.mybatis.logging.Logger;
 import org.mybatis.logging.LoggerFactory;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.concurrent.ConcurrentTaskExecutor;
-import org.springframework.web.servlet.config.annotation.AsyncSupportConfigurer;
-import org.springframework.web.servlet.config.annotation.CorsRegistry;
-import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.config.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -55,10 +52,16 @@ public class WebConfiguration implements WebMvcConfigurer {
         excludePath.add("/webjars/**");
         excludePath.add("/static/**");  //静态资源
         excludePath.add("/assets/**");  //静态资源
+        excludePath.add("/images/**");  //图片存储
 //        logger.info("====通过登录拦截器====");
         registry.addInterceptor(tokenInterceptor)
                 .addPathPatterns("/**")
                 .excludePathPatterns(excludePath);
         WebMvcConfigurer.super.addInterceptors(registry);
+    }
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/images/**").addResourceLocations("file:E:\\data\\WCH\\uploadfile");
     }
 }
