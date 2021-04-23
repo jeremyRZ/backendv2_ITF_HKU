@@ -60,8 +60,4 @@ public class TaskUi implements Serializable {
 
     private Integer disabled;
 
-    @TableField("parentID")
-    private Integer parentid;
-
-
 }

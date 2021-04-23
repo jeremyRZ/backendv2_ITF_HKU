@@ -63,6 +63,7 @@ public class UserController {
      * @param user
      * @return
      */
+    //todo salt+token
     @PostMapping("addUser")
     @ResponseBody
     public ResultObj addUser(@RequestBody User user) {
@@ -89,9 +90,19 @@ public class UserController {
             return ResultObj.ADD_ERROR;
         }
     }
-    @RequestMapping("/index")
-    public String index() {
-        return "Hello World! 欢迎来到 spring boot application";
+
+    @RequestMapping("/updateUser")
+    @ResponseBody
+    public ResultObj updateUser(@RequestBody User user) {
+        try {
+            QueryWrapper<User> queryWrapper = new QueryWrapper<>();
+            queryWrapper.eq("uname", user.getUname());
+            userService.update(user,queryWrapper);
+            return ResultObj.ADD_SUCCESS;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResultObj.ADD_ERROR;
+        }
     }
 
 }
