@@ -24,6 +24,9 @@ public class ResultObj {
     public static final ResultObj ADD_SUCCESS = new ResultObj(ReturnCode.SUCCESS, "添加成功");
     public static final ResultObj ADD_ERROR= new ResultObj(ReturnCode.FAIL, "添加失败");
 
+    public static final ResultObj QUERY_SUCCESS = new ResultObj(ReturnCode.SUCCESS, "Query Successful");
+    public static final ResultObj QUERY_ERROR= new ResultObj(ReturnCode.FAIL, "Query Failed");
+
     public static final ResultObj DELETE_SUCCESS = new ResultObj(ReturnCode.SUCCESS, "删除成功");
     public static final ResultObj DELETE_FAIL = new ResultObj(ReturnCode.FAIL, "删除失败");
 
