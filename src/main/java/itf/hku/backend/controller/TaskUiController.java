@@ -2,6 +2,7 @@ package itf.hku.backend.controller;
 
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import itf.hku.backend.common.OutputList;
 import itf.hku.backend.common.OutputObject;
 import itf.hku.backend.common.ReturnCode;
 import itf.hku.backend.entity.TaskUi;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.stereotype.Controller;
 
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * <p>
@@ -30,7 +32,7 @@ public class TaskUiController {
     @Autowired
     private TaskUiService taskUiService;
 
-    @PostMapping("get")
+    @GetMapping("getTaskDetail")
     @ResponseBody
     public OutputObject queryTaskui(@RequestBody TaskUi taskUi){
         QueryWrapper<TaskUi> queryWrapper = new QueryWrapper<>();
@@ -51,8 +53,16 @@ public class TaskUiController {
         hs.put("reinspRetest",returnResult.getReinspretest());
         hs.put("responsibilty",returnResult.getResponsibilty());
         hs.put("ordering",returnResult.getOrdering());
-//        return new OutputObject(String.valueOf(HttpStatus.OK.value()),"Login Success",hs);
         return new OutputObject(ReturnCode.SUCCESS,"Query TaskUI Data Success",hs);
+    }
+
+    @GetMapping("getModuleList")
+    @ResponseBody
+    public OutputList queryModuleList(@RequestBody TaskUi taskUi){
+        QueryWrapper<TaskUi> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("moduleType",taskUi.getModuletype());
+        List<TaskUi> taskUiList = taskUiService.list(queryWrapper);
+        return new OutputList(ReturnCode.SUCCESS,"Query TaskUI Data Success",taskUiList);
     }
 }
 

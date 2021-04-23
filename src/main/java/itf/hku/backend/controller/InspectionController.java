@@ -16,6 +16,6 @@ import org.springframework.stereotype.Controller;
 @Controller
 @RequestMapping("/inspection")
 public class InspectionController {
-
+    
 }
 
