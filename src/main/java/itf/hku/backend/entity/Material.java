@@ -27,5 +27,10 @@ public class Material implements Serializable {
 
     private String remark;
 
+    /**
+     *
+     */
+    @TableField("picPath")
+    private String picpath;
 
 }
