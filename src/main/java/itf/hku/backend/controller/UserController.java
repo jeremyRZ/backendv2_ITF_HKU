@@ -6,7 +6,6 @@ import itf.hku.backend.common.*;
 import itf.hku.backend.entity.User;
 import itf.hku.backend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
@@ -27,6 +26,7 @@ import java.util.HashMap;
  * @author 朱少杰
  * @since 2020-06-04
  */
+
 @RestController
 @RequestMapping("/api/user")
 public class UserController {
@@ -50,6 +50,7 @@ public class UserController {
         if (users == null){
             return new OutputObject(ReturnCode.FAIL,"用户不存在",user);
         }
+
         String token = TokenUtil.sign(new User(user.getUname(),s));
         HashMap<String,Object> hs =new HashMap<>();
         hs.put("token",token);
@@ -104,8 +105,5 @@ public class UserController {
             return ResultObj.ADD_ERROR;
         }
     }
-
 }
-
-
 

@@ -15,7 +15,7 @@ public class Main {
         //数据源
         DataSourceConfig dataSourceConfig = new DataSourceConfig();
         dataSourceConfig.setDbType(DbType.MYSQL);
-        dataSourceConfig.setUrl("jdbc:mysql://localhost:3306/itf_hku?useUnicode=true&characterEncoding=UTF-8");
+        dataSourceConfig.setUrl("jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8");
         dataSourceConfig.setUsername("root");
         dataSourceConfig.setPassword("password");
         dataSourceConfig.setDriverName("com.mysql.cj.jdbc.Driver");
@@ -43,7 +43,7 @@ public class Main {
         strategyConfig.setNaming(NamingStrategy.underline_to_camel);
         strategyConfig.setColumnNaming(NamingStrategy.underline_to_camel);
         autoGenerator.setStrategy(strategyConfig);
-
+        //
         autoGenerator.execute();
     }
 }

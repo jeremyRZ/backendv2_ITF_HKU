@@ -56,7 +56,7 @@ public class TaskUiController {
         return new OutputObject(ReturnCode.SUCCESS,"Query TaskUI Data Success",hs);
     }
 
-    @GetMapping("getModuleList")
+    @PostMapping("getModuleList")
     @ResponseBody
     public OutputList queryModuleList(@RequestBody TaskUi taskUi){
         QueryWrapper<TaskUi> queryWrapper = new QueryWrapper<>();
