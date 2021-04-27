@@ -5,6 +5,10 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import java.time.LocalDateTime;
 import com.baomidou.mybatisplus.annotation.TableField;
 import java.io.Serializable;
+import java.util.List;
+
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.extension.handlers.FastjsonTypeHandler;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -18,8 +22,9 @@ import lombok.experimental.Accessors;
  * @since 2021-04-26
  */
 @Data
-  @EqualsAndHashCode(callSuper = false)
-  @Accessors(chain = true)
+@EqualsAndHashCode(callSuper = false)
+@Accessors(chain = true)
+@TableName(autoResultMap = true)
 public class UnitsManu implements Serializable {
 
     private static final long serialVersionUID=1L;
@@ -63,8 +68,7 @@ public class UnitsManu implements Serializable {
     @TableField("actualInstall")
     private LocalDateTime actualInstall;
 
-    @TableField("inspTasks")
-    private String inspTasks;
-
+    @TableField(value = "inspTasks", typeHandler = FastjsonTypeHandler.class)
+    private List inspTasks;
 
 }

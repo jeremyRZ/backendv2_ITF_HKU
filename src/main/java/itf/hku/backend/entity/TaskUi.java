@@ -4,6 +4,10 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableField;
 import java.io.Serializable;
+import java.util.List;
+
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.extension.handlers.FastjsonTypeHandler;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -17,6 +21,7 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
+@TableName(autoResultMap=true)
 public class TaskUi implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -36,8 +41,8 @@ public class TaskUi implements Serializable {
     @TableField("taskItem")
     private Integer taskitem;
 
-    @TableField("taskUIParams")
-    private String taskuiparams;
+    @TableField(value = "taskUIParams", typeHandler= FastjsonTypeHandler.class)
+    private List taskuiparams;
 
     @TableField("taskDescEn")
     private String taskdescen;

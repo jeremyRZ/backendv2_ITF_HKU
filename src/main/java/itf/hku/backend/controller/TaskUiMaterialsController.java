@@ -35,8 +35,6 @@ public class TaskUiMaterialsController {
     @GetMapping("getMaterialsList")
     @ResponseBody
     public OutputList queryMaterialsList(){
-//        QueryWrapper<TaskUiMaterials> queryWrapper = new QueryWrapper<>();
-//        queryWrapper.eq("moduleType",taskUiMaterials.getId());
         List<TaskUiMaterials> taskUiList = taskUiMaterialsService.list();
         return new OutputList(ReturnCode.SUCCESS,"Query TaskUI Data Success",taskUiList);
     }
