@@ -4,6 +4,7 @@ import itf.hku.backend.mapper.UserMapper;
 import itf.hku.backend.entity.User;
 import itf.hku.backend.service.UserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -16,6 +17,5 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
-
 }
 

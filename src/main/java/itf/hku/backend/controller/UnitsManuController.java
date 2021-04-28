@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.*;
 
 import org.springframework.stereotype.Controller;
 
-import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -35,8 +34,7 @@ public class UnitsManuController {
     @ResponseBody
     public OutputList genReport(@RequestBody UnitsManu unitsManu){
         QueryWrapper<UnitsManu> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("unitID",unitsManu.getUnitID())
-                .eq("moduleID",unitsManu.getModuleID());
+        queryWrapper.eq("unitID",unitsManu.getUnitID());
         List<UnitsManu> unitsManuList = unitsManuService.list(queryWrapper);
         return new OutputList(ReturnCode.SUCCESS,"Query Units Data Success",unitsManuList);
     }

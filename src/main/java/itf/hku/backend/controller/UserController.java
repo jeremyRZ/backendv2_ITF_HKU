@@ -2,8 +2,11 @@ package itf.hku.backend.controller;
 
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import itf.hku.backend.annotation.CurrentUser;
+import itf.hku.backend.annotation.LoginRequired;
 import itf.hku.backend.common.*;
 import itf.hku.backend.entity.User;
+import itf.hku.backend.entity.UserProj;
 import itf.hku.backend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -34,37 +37,46 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @PostMapping("login")
-    @ResponseBody
-    public OutputObject login(@RequestBody User user){
-        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq(user.getUname() != null, "uname", user.getUname());
-        User users = userService.getOne(queryWrapper);
-        // 密码校验
-        String s = (MD5Utils.md5(user.getPasswd()+users.getSalt()));
-        if (users.getPasswd().equals(s)==false){
-            return new OutputObject(ReturnCode.FAIL,"密码不正确",user);
-        }
-        queryWrapper.in(user.getPasswd() != null, "passwd", s);
-        // 通过用户名从数据库中查询出该用户
-        if (users == null){
-            return new OutputObject(ReturnCode.FAIL,"用户不存在",user);
-        }
-
-        String token = TokenUtil.sign(new User(user.getUname(),s));
-        HashMap<String,Object> hs =new HashMap<>();
-        hs.put("token",token);
-        hs.put("userid",users.getUserid());
-//        return new OutputObject(String.valueOf(HttpStatus.OK.value()),"Login Success",hs);
-        return new OutputObject(ReturnCode.SUCCESS,"Login Success",hs);
-    }
+/**
+*
+* Move to UserController for Login
+*
+ */
+//    @PostMapping("login")
+//    @ResponseBody
+//    public OutputObject login(@RequestBody User user){
+//        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
+//        queryWrapper.eq(user.getUname() != null, "uname", user.getUname());
+//        User users = userService.getOne(queryWrapper);
+//
+//        // 密码校验
+//        String s = (MD5Utils.md5(user.getPasswd()+users.getSalt()));
+//
+//        System.out.println(s);
+//        System.out.println("111111111111111");
+//        System.out.println(users.getPasswd());
+//        if (users.getPasswd().equals(s)==false){
+//            return new OutputObject(ReturnCode.FAIL,"密码不正确",user);
+//        }
+//        queryWrapper.in(user.getPasswd() != null, "passwd", s);
+//        // 通过用户名从数据库中查询出该用户
+//        if (users == null){
+//            return new OutputObject(ReturnCode.FAIL,"用户不存在",user);
+//        }
+//        String token = TokenUtil.sign(new User(user.getUname(),s));
+//        HashMap<String,Object> hs =new HashMap<>();
+//        hs.put("token",token);
+//        hs.put("userid",users.getUserid());
+////        return new OutputObject(String.valueOf(HttpStatus.OK.value()),"Login Success",hs);
+//        return new OutputObject(ReturnCode.SUCCESS,"Login Success",hs);
+//    }
 
     /**
      * 用户注册
      * @param user
      * @return
      */
-    //todo salt+token
+
     @PostMapping("addUser")
     @ResponseBody
     public ResultObj addUser(@RequestBody User user) {
@@ -104,6 +116,11 @@ public class UserController {
             e.printStackTrace();
             return ResultObj.ADD_ERROR;
         }
+    }
+    @GetMapping("/getdata") //get information aboout user
+    @LoginRequired
+    public Object testCurrentUser(@CurrentUser User user) {
+        return user;
     }
 }
 

@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.*;
 
 import org.springframework.stereotype.Controller;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
@@ -58,11 +60,32 @@ public class TaskUiController {
 
     @PostMapping("getModuleList")
     @ResponseBody
-    public OutputList queryModuleList(@RequestBody TaskUi taskUi){
+    public OutputList queryModuleList(){
         QueryWrapper<TaskUi> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("moduleType",taskUi.getModuletype());
+//        queryWrapper.groupBy("moduletype");
         List<TaskUi> taskUiList = taskUiService.list(queryWrapper);
         return new OutputList(ReturnCode.SUCCESS,"Query TaskUI Data Success",taskUiList);
+    }
+    //Todo use tree model
+    @PostMapping("getModuleListByType")
+    @ResponseBody
+    public OutputList queryModuleListByType(){
+
+
+
+        QueryWrapper<TaskUi> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("moduletype","Toilet");
+        List<TaskUi> ToiletList = taskUiService.list(queryWrapper);
+
+        QueryWrapper<TaskUi> queryWrapper2 = new QueryWrapper<>();
+        queryWrapper2.eq("moduleType","Hostel Room");
+        List<TaskUi> HostList = taskUiService.list(queryWrapper2);
+
+        System.out.println("1111111111111111");
+        System.out.println(HostList);
+        System.out.println("1111111111111111");
+        System.out.println(ToiletList);
+        return new OutputList(ReturnCode.SUCCESS,"Query TaskUI Data Success",HostList);
     }
 }
 

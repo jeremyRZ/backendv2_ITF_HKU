@@ -3,8 +3,10 @@ package itf.hku.backend.config;
 import itf.hku.backend.interceptor.TokenInterceptor;
 import org.mybatis.logging.Logger;
 import org.mybatis.logging.LoggerFactory;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.concurrent.ConcurrentTaskExecutor;
+import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.servlet.config.annotation.*;
 
 import java.util.ArrayList;
@@ -46,22 +48,29 @@ public class WebConfiguration implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry){
-        List<String> excludePath = new ArrayList<>();
-        // 排除拦截
-        excludePath.add("/api/**");  //api
-        excludePath.add("/webjars/**");
-        excludePath.add("/static/**");  //静态资源
-        excludePath.add("/assets/**");  //静态资源
-        excludePath.add("/images/**");  //图片存储
-//        logger.info("====通过登录拦截器====");
-        registry.addInterceptor(tokenInterceptor)
-                .addPathPatterns("/**")
-                .excludePathPatterns(excludePath);
+        registry.addInterceptor(authenticationInterceptor())
+                .addPathPatterns("/**");    // 拦截所有请求，通过判断是否有 @LoginRequired 注解 决定是否需要登录
         WebMvcConfigurer.super.addInterceptors(registry);
     }
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/images/**").addResourceLocations("file:E:\\data\\WCH\\uploadfile");
+    }
+
+    @Override
+    public void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolvers) {
+        argumentResolvers.add(currentUserMethodArgumentResolver());
+        WebMvcConfigurer.super.addArgumentResolvers(argumentResolvers);
+    }
+
+    @Bean
+    public CurrentUserMethodArgumentResolver currentUserMethodArgumentResolver() {
+        return new CurrentUserMethodArgumentResolver();
+    }
+
+    @Bean
+    public TokenInterceptor authenticationInterceptor() {
+        return new TokenInterceptor();
     }
 }

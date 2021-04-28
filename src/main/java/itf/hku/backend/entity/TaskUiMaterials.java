@@ -21,7 +21,7 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName(autoResultMap=true)
+//@TableName(autoResultMap=true)
 public class TaskUiMaterials implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -32,8 +32,9 @@ public class TaskUiMaterials implements Serializable {
     @TableField("elementType")
     private String elementtype;
 
-    @TableField(value = "elementUIParams",typeHandler= FastjsonTypeHandler.class)
-    private List elementuiparams;
+//    @TableField(value = "elementUIParams",typeHandler= FastjsonTypeHandler.class)
+    @TableField(value = "elementUIParams")
+    private String elementuiparams;
 
 
 }

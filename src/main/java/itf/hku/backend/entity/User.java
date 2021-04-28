@@ -29,7 +29,7 @@ public class User implements Serializable {
      * 用户ID 绝对唯一
      */
     @TableId(value = "userid", type = IdType.AUTO)
-    private Long userid;
+    private Integer userid;
 
     /**
      * 用户名
