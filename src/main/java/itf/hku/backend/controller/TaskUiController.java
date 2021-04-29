@@ -19,6 +19,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * <p>
@@ -79,6 +80,65 @@ public class TaskUiController {
 
         List<Map<String, Object>> ParentList = taskUiService.listMaps(queryWrapper);
 
+
+        QueryWrapper<TaskUi> subqueryWrapper = new QueryWrapper<>();
+        subqueryWrapper.select("taskType","taskUIParams","taskDay","taskItem","inspTestMethod","reinspRetest","responsibilty","ordering","moduleType");
+        List<Map<String, Object>> SubList = taskUiService.listMaps(subqueryWrapper);
+
+//        for (Map<String, Object> map : SubList) {
+//            for (String s : map.keySet()) {
+//                System.out.print(map.get(s) + "  ");
+//            }
+//        }
+//        Map map = new HashMap();
+//        map.put("a",2);map.put("B","222");
+//        ParentList.add(map);
+
+
+        //// List all data
+        for (int i = 1; i < SubList.size(); i++) {
+            int finalI = i;
+            System.out.println(finalI);
+            List<Map<String, Object>> result = SubList.stream()
+                    .filter(m -> ((Integer) m.get("taskItem")) == finalI)
+                    .filter(t -> ((String) t.get("moduleType")).equals("Toilet"))
+                    .collect(Collectors.toList());
+            System.out.println("--------------Start----------------------");
+            System.out.println(result);
+            System.out.println("--------------End----------------------");
+
+            ParentList.forEach(map -> {
+                if (!map.containsKey("children")) {
+                    map.put("children",result);
+                }
+            });
+        }
+
+//        for (int i = 0; i < SubList.size(); i++) {
+//            Map<String, Object> map = SubList.get(i);
+//            Integer taskItem = (Integer) map.get("taskItem");
+////            Map<String, Object> pmap = ParentList.get(i);
+////            Long numTasks = (Long) pmap.get("numTasks");
+//                    List<Map<String, Object>> result = SubList.stream()
+//                            .filter(m -> ((Integer) m.get("taskItem")) == 1)
+//                            .filter(t -> ((String) t.get("moduleType")).equals("Toilet"))
+//                            .collect(Collectors.toList());
+//                    System.out.println("--------------Start----------------------");
+//                    System.out.println(result);
+//                    System.out.println("--------------End----------------------");
+////            System.out.println("--------------Start----------------------");
+////            System.out.println("taskType:" + taskItem);
+////            System.out.println("--------------End----------------------");
+//        }
+
+//
+//        ParentList.forEach(map -> {
+//            if (!map.containsKey("children")) {
+//                map.put("children",SubList);
+//            }
+//        });
+
+
 //        QueryWrapper<TaskUi> queryWrapper = new QueryWrapper<>();
 //        queryWrapper.("moduletype","Toilet");
 //        List<TaskUi> ToiletList = taskUiService.list(queryWrapper);
@@ -92,7 +152,6 @@ public class TaskUiController {
 //        System.out.println("1111111111111111");
 //        System.out.println(ToiletList);
         return new OutputList(ReturnCode.SUCCESS,"Query TaskUI Data Success",ParentList);
-
     }
 }
 
