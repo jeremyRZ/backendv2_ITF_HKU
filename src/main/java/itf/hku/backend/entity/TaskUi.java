@@ -64,5 +64,4 @@ public class TaskUi implements Serializable {
     private Integer ordering;
 
     private Integer disabled;
-
 }

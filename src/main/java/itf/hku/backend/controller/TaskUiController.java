@@ -18,6 +18,7 @@ import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -70,22 +71,28 @@ public class TaskUiController {
     @PostMapping("getModuleListByType")
     @ResponseBody
     public OutputList queryModuleListByType(){
-
-
-
         QueryWrapper<TaskUi> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("moduletype","Toilet");
-        List<TaskUi> ToiletList = taskUiService.list(queryWrapper);
+        queryWrapper.select("projID","moduleType","taskItem","taskDescEn","taskDescCn","count(*) as numTasks")
+                    .groupBy("moduleType","taskItem")
+                    .lt("disabled",1)
+                    .orderByAsc("projID","moduleType","taskItem");
 
-        QueryWrapper<TaskUi> queryWrapper2 = new QueryWrapper<>();
-        queryWrapper2.eq("moduleType","Hostel Room");
-        List<TaskUi> HostList = taskUiService.list(queryWrapper2);
+        List<Map<String, Object>> ParentList = taskUiService.listMaps(queryWrapper);
 
-        System.out.println("1111111111111111");
-        System.out.println(HostList);
-        System.out.println("1111111111111111");
-        System.out.println(ToiletList);
-        return new OutputList(ReturnCode.SUCCESS,"Query TaskUI Data Success",HostList);
+//        QueryWrapper<TaskUi> queryWrapper = new QueryWrapper<>();
+//        queryWrapper.("moduletype","Toilet");
+//        List<TaskUi> ToiletList = taskUiService.list(queryWrapper);
+//
+//        QueryWrapper<TaskUi> queryWrapper2 = new QueryWrapper<>();
+//        queryWrapper2.eq("moduleType","Hostel Room");
+//        List<TaskUi> HostList = taskUiService.list(queryWrapper2);
+//
+//        System.out.println("1111111111111111");
+//        System.out.println(HostList);
+//        System.out.println("1111111111111111");
+//        System.out.println(ToiletList);
+        return new OutputList(ReturnCode.SUCCESS,"Query TaskUI Data Success",ParentList);
+
     }
 }
 
