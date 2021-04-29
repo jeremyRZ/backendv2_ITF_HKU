@@ -742,3 +742,259 @@
  No active profile set, falling back to default profiles: default 
 2021-04-29 14:53:01 [main] INFO  itf.hku.backend.BackendApplication : 
  Started BackendApplication in 1.713 seconds (JVM running for 2.191) 
+2021-04-29 14:53:14 [main] INFO  itf.hku.backend.BackendApplication : 
+ Starting BackendApplication using Java 1.8.0_275 on DESKTOP-D4T0GAH with PID 3280 (E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU\target\classes started by Jeremy in E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU) 
+2021-04-29 14:53:14 [main] DEBUG itf.hku.backend.BackendApplication : 
+ Running with Spring Boot v2.4.4, Spring v5.3.5 
+2021-04-29 14:53:14 [main] INFO  itf.hku.backend.BackendApplication : 
+ No active profile set, falling back to default profiles: default 
+2021-04-29 14:53:16 [main] INFO  itf.hku.backend.BackendApplication : 
+ Started BackendApplication in 1.672 seconds (JVM running for 2.112) 
+2021-04-29 15:14:30 [main] INFO  itf.hku.backend.BackendApplication : 
+ Starting BackendApplication using Java 1.8.0_275 on DESKTOP-D4T0GAH with PID 21884 (E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU\target\classes started by Jeremy in E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU) 
+2021-04-29 15:14:30 [main] DEBUG itf.hku.backend.BackendApplication : 
+ Running with Spring Boot v2.4.4, Spring v5.3.5 
+2021-04-29 15:14:30 [main] INFO  itf.hku.backend.BackendApplication : 
+ No active profile set, falling back to default profiles: default 
+2021-04-29 15:14:31 [main] INFO  itf.hku.backend.BackendApplication : 
+ Started BackendApplication in 1.68 seconds (JVM running for 2.122) 
+2021-04-29 15:22:30 [main] INFO  itf.hku.backend.BackendApplication : 
+ Starting BackendApplication using Java 1.8.0_275 on DESKTOP-D4T0GAH with PID 18616 (E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU\target\classes started by Jeremy in E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU) 
+2021-04-29 15:22:30 [main] DEBUG itf.hku.backend.BackendApplication : 
+ Running with Spring Boot v2.4.4, Spring v5.3.5 
+2021-04-29 15:22:30 [main] INFO  itf.hku.backend.BackendApplication : 
+ No active profile set, falling back to default profiles: default 
+2021-04-29 15:22:31 [main] INFO  itf.hku.backend.BackendApplication : 
+ Started BackendApplication in 1.673 seconds (JVM running for 2.194) 
+2021-04-29 15:32:14 [main] INFO  itf.hku.backend.BackendApplication : 
+ Starting BackendApplication using Java 1.8.0_275 on DESKTOP-D4T0GAH with PID 19744 (E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU\target\classes started by Jeremy in E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU) 
+2021-04-29 15:32:14 [main] DEBUG itf.hku.backend.BackendApplication : 
+ Running with Spring Boot v2.4.4, Spring v5.3.5 
+2021-04-29 15:32:14 [main] INFO  itf.hku.backend.BackendApplication : 
+ No active profile set, falling back to default profiles: default 
+2021-04-29 15:32:16 [main] INFO  itf.hku.backend.BackendApplication : 
+ Started BackendApplication in 1.865 seconds (JVM running for 2.368) 
+2021-04-29 15:32:37 [main] INFO  itf.hku.backend.BackendApplication : 
+ Starting BackendApplication using Java 1.8.0_275 on DESKTOP-D4T0GAH with PID 15092 (E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU\target\classes started by Jeremy in E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU) 
+2021-04-29 15:32:37 [main] DEBUG itf.hku.backend.BackendApplication : 
+ Running with Spring Boot v2.4.4, Spring v5.3.5 
+2021-04-29 15:32:37 [main] INFO  itf.hku.backend.BackendApplication : 
+ No active profile set, falling back to default profiles: default 
+2021-04-29 15:32:39 [main] INFO  itf.hku.backend.BackendApplication : 
+ Started BackendApplication in 1.614 seconds (JVM running for 2.055) 
+2021-04-29 15:32:49 [main] INFO  itf.hku.backend.BackendApplication : 
+ Starting BackendApplication using Java 1.8.0_275 on DESKTOP-D4T0GAH with PID 7180 (E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU\target\classes started by Jeremy in E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU) 
+2021-04-29 15:32:49 [main] DEBUG itf.hku.backend.BackendApplication : 
+ Running with Spring Boot v2.4.4, Spring v5.3.5 
+2021-04-29 15:32:49 [main] INFO  itf.hku.backend.BackendApplication : 
+ No active profile set, falling back to default profiles: default 
+2021-04-29 15:32:50 [main] INFO  itf.hku.backend.BackendApplication : 
+ Started BackendApplication in 1.668 seconds (JVM running for 2.115) 
+2021-04-29 15:38:27 [main] INFO  itf.hku.backend.BackendApplication : 
+ Starting BackendApplication using Java 1.8.0_275 on DESKTOP-D4T0GAH with PID 14704 (E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU\target\classes started by Jeremy in E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU) 
+2021-04-29 15:38:27 [main] DEBUG itf.hku.backend.BackendApplication : 
+ Running with Spring Boot v2.4.4, Spring v5.3.5 
+2021-04-29 15:38:27 [main] INFO  itf.hku.backend.BackendApplication : 
+ No active profile set, falling back to default profiles: default 
+2021-04-29 15:38:28 [main] INFO  itf.hku.backend.BackendApplication : 
+ Started BackendApplication in 1.935 seconds (JVM running for 2.475) 
+2021-04-29 16:07:15 [main] INFO  itf.hku.backend.BackendApplication : 
+ Starting BackendApplication using Java 1.8.0_275 on DESKTOP-D4T0GAH with PID 19892 (E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU\target\classes started by Jeremy in E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU) 
+2021-04-29 16:07:15 [main] DEBUG itf.hku.backend.BackendApplication : 
+ Running with Spring Boot v2.4.4, Spring v5.3.5 
+2021-04-29 16:07:15 [main] INFO  itf.hku.backend.BackendApplication : 
+ No active profile set, falling back to default profiles: default 
+2021-04-29 16:07:17 [main] INFO  itf.hku.backend.BackendApplication : 
+ Started BackendApplication in 1.805 seconds (JVM running for 2.399) 
+2021-04-29 16:07:50 [main] INFO  itf.hku.backend.BackendApplication : 
+ Starting BackendApplication using Java 1.8.0_275 on DESKTOP-D4T0GAH with PID 22888 (E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU\target\classes started by Jeremy in E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU) 
+2021-04-29 16:07:50 [main] DEBUG itf.hku.backend.BackendApplication : 
+ Running with Spring Boot v2.4.4, Spring v5.3.5 
+2021-04-29 16:07:50 [main] INFO  itf.hku.backend.BackendApplication : 
+ No active profile set, falling back to default profiles: default 
+2021-04-29 16:07:51 [main] INFO  itf.hku.backend.BackendApplication : 
+ Started BackendApplication in 1.972 seconds (JVM running for 2.444) 
+2021-04-29 16:22:59 [main] INFO  itf.hku.backend.BackendApplication : 
+ Starting BackendApplication using Java 1.8.0_275 on DESKTOP-D4T0GAH with PID 19076 (E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU\target\classes started by Jeremy in E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU) 
+2021-04-29 16:22:59 [main] DEBUG itf.hku.backend.BackendApplication : 
+ Running with Spring Boot v2.4.4, Spring v5.3.5 
+2021-04-29 16:22:59 [main] INFO  itf.hku.backend.BackendApplication : 
+ No active profile set, falling back to default profiles: default 
+2021-04-29 16:23:01 [main] INFO  itf.hku.backend.BackendApplication : 
+ Started BackendApplication in 1.708 seconds (JVM running for 2.159) 
+2021-04-29 16:26:36 [main] INFO  itf.hku.backend.BackendApplication : 
+ Starting BackendApplication using Java 1.8.0_275 on DESKTOP-D4T0GAH with PID 15244 (E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU\target\classes started by Jeremy in E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU) 
+2021-04-29 16:26:36 [main] DEBUG itf.hku.backend.BackendApplication : 
+ Running with Spring Boot v2.4.4, Spring v5.3.5 
+2021-04-29 16:26:36 [main] INFO  itf.hku.backend.BackendApplication : 
+ No active profile set, falling back to default profiles: default 
+2021-04-29 16:26:37 [main] INFO  itf.hku.backend.BackendApplication : 
+ Started BackendApplication in 1.641 seconds (JVM running for 2.087) 
+2021-04-29 16:30:16 [main] INFO  itf.hku.backend.BackendApplication : 
+ Starting BackendApplication using Java 1.8.0_275 on DESKTOP-D4T0GAH with PID 15212 (E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU\target\classes started by Jeremy in E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU) 
+2021-04-29 16:30:16 [main] DEBUG itf.hku.backend.BackendApplication : 
+ Running with Spring Boot v2.4.4, Spring v5.3.5 
+2021-04-29 16:30:16 [main] INFO  itf.hku.backend.BackendApplication : 
+ No active profile set, falling back to default profiles: default 
+2021-04-29 16:30:18 [main] INFO  itf.hku.backend.BackendApplication : 
+ Started BackendApplication in 1.691 seconds (JVM running for 2.11) 
+2021-04-29 16:30:49 [main] INFO  itf.hku.backend.BackendApplication : 
+ Starting BackendApplication using Java 1.8.0_275 on DESKTOP-D4T0GAH with PID 8880 (E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU\target\classes started by Jeremy in E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU) 
+2021-04-29 16:30:49 [main] DEBUG itf.hku.backend.BackendApplication : 
+ Running with Spring Boot v2.4.4, Spring v5.3.5 
+2021-04-29 16:30:49 [main] INFO  itf.hku.backend.BackendApplication : 
+ No active profile set, falling back to default profiles: default 
+2021-04-29 16:30:50 [main] INFO  itf.hku.backend.BackendApplication : 
+ Started BackendApplication in 1.615 seconds (JVM running for 2.046) 
+2021-04-29 16:32:05 [main] INFO  itf.hku.backend.BackendApplication : 
+ Starting BackendApplication using Java 1.8.0_275 on DESKTOP-D4T0GAH with PID 8012 (E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU\target\classes started by Jeremy in E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU) 
+2021-04-29 16:32:05 [main] DEBUG itf.hku.backend.BackendApplication : 
+ Running with Spring Boot v2.4.4, Spring v5.3.5 
+2021-04-29 16:32:05 [main] INFO  itf.hku.backend.BackendApplication : 
+ No active profile set, falling back to default profiles: default 
+2021-04-29 16:32:06 [main] INFO  itf.hku.backend.BackendApplication : 
+ Started BackendApplication in 1.618 seconds (JVM running for 2.06) 
+2021-04-29 16:33:03 [main] INFO  itf.hku.backend.BackendApplication : 
+ Starting BackendApplication using Java 1.8.0_275 on DESKTOP-D4T0GAH with PID 24540 (E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU\target\classes started by Jeremy in E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU) 
+2021-04-29 16:33:03 [main] DEBUG itf.hku.backend.BackendApplication : 
+ Running with Spring Boot v2.4.4, Spring v5.3.5 
+2021-04-29 16:33:03 [main] INFO  itf.hku.backend.BackendApplication : 
+ No active profile set, falling back to default profiles: default 
+2021-04-29 16:33:05 [main] INFO  itf.hku.backend.BackendApplication : 
+ Started BackendApplication in 1.668 seconds (JVM running for 2.1) 
+2021-04-29 16:37:19 [main] INFO  itf.hku.backend.BackendApplication : 
+ Starting BackendApplication using Java 1.8.0_275 on DESKTOP-D4T0GAH with PID 16344 (E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU\target\classes started by Jeremy in E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU) 
+2021-04-29 16:37:19 [main] DEBUG itf.hku.backend.BackendApplication : 
+ Running with Spring Boot v2.4.4, Spring v5.3.5 
+2021-04-29 16:37:19 [main] INFO  itf.hku.backend.BackendApplication : 
+ No active profile set, falling back to default profiles: default 
+2021-04-29 16:37:21 [main] INFO  itf.hku.backend.BackendApplication : 
+ Started BackendApplication in 1.713 seconds (JVM running for 2.176) 
+2021-04-29 16:37:49 [main] INFO  itf.hku.backend.BackendApplication : 
+ Starting BackendApplication using Java 1.8.0_275 on DESKTOP-D4T0GAH with PID 24344 (E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU\target\classes started by Jeremy in E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU) 
+2021-04-29 16:37:49 [main] DEBUG itf.hku.backend.BackendApplication : 
+ Running with Spring Boot v2.4.4, Spring v5.3.5 
+2021-04-29 16:37:49 [main] INFO  itf.hku.backend.BackendApplication : 
+ No active profile set, falling back to default profiles: default 
+2021-04-29 16:37:50 [main] INFO  itf.hku.backend.BackendApplication : 
+ Started BackendApplication in 1.642 seconds (JVM running for 2.102) 
+2021-04-29 16:38:15 [main] INFO  itf.hku.backend.BackendApplication : 
+ Starting BackendApplication using Java 1.8.0_275 on DESKTOP-D4T0GAH with PID 23360 (E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU\target\classes started by Jeremy in E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU) 
+2021-04-29 16:38:15 [main] DEBUG itf.hku.backend.BackendApplication : 
+ Running with Spring Boot v2.4.4, Spring v5.3.5 
+2021-04-29 16:38:15 [main] INFO  itf.hku.backend.BackendApplication : 
+ No active profile set, falling back to default profiles: default 
+2021-04-29 16:38:16 [main] INFO  itf.hku.backend.BackendApplication : 
+ Started BackendApplication in 1.653 seconds (JVM running for 2.092) 
+2021-04-29 16:38:32 [main] INFO  itf.hku.backend.BackendApplication : 
+ Starting BackendApplication using Java 1.8.0_275 on DESKTOP-D4T0GAH with PID 19692 (E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU\target\classes started by Jeremy in E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU) 
+2021-04-29 16:38:32 [main] DEBUG itf.hku.backend.BackendApplication : 
+ Running with Spring Boot v2.4.4, Spring v5.3.5 
+2021-04-29 16:38:32 [main] INFO  itf.hku.backend.BackendApplication : 
+ No active profile set, falling back to default profiles: default 
+2021-04-29 16:38:34 [main] INFO  itf.hku.backend.BackendApplication : 
+ Started BackendApplication in 1.697 seconds (JVM running for 2.156) 
+2021-04-29 16:42:32 [main] INFO  itf.hku.backend.BackendApplication : 
+ Starting BackendApplication using Java 1.8.0_275 on DESKTOP-D4T0GAH with PID 24428 (E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU\target\classes started by Jeremy in E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU) 
+2021-04-29 16:42:32 [main] DEBUG itf.hku.backend.BackendApplication : 
+ Running with Spring Boot v2.4.4, Spring v5.3.5 
+2021-04-29 16:42:32 [main] INFO  itf.hku.backend.BackendApplication : 
+ No active profile set, falling back to default profiles: default 
+2021-04-29 16:42:34 [main] INFO  itf.hku.backend.BackendApplication : 
+ Started BackendApplication in 1.627 seconds (JVM running for 2.043) 
+2021-04-29 16:44:21 [main] INFO  itf.hku.backend.BackendApplication : 
+ Starting BackendApplication using Java 1.8.0_275 on DESKTOP-D4T0GAH with PID 22504 (E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU\target\classes started by Jeremy in E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU) 
+2021-04-29 16:44:21 [main] DEBUG itf.hku.backend.BackendApplication : 
+ Running with Spring Boot v2.4.4, Spring v5.3.5 
+2021-04-29 16:44:21 [main] INFO  itf.hku.backend.BackendApplication : 
+ No active profile set, falling back to default profiles: default 
+2021-04-29 16:44:23 [main] INFO  itf.hku.backend.BackendApplication : 
+ Started BackendApplication in 1.666 seconds (JVM running for 2.097) 
+2021-04-29 16:49:36 [main] INFO  itf.hku.backend.BackendApplication : 
+ Starting BackendApplication using Java 1.8.0_275 on DESKTOP-D4T0GAH with PID 18420 (E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU\target\classes started by Jeremy in E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU) 
+2021-04-29 16:49:36 [main] DEBUG itf.hku.backend.BackendApplication : 
+ Running with Spring Boot v2.4.4, Spring v5.3.5 
+2021-04-29 16:49:36 [main] INFO  itf.hku.backend.BackendApplication : 
+ No active profile set, falling back to default profiles: default 
+2021-04-29 16:49:37 [main] INFO  itf.hku.backend.BackendApplication : 
+ Started BackendApplication in 1.627 seconds (JVM running for 2.052) 
+2021-04-29 16:50:17 [main] INFO  itf.hku.backend.BackendApplication : 
+ Starting BackendApplication using Java 1.8.0_275 on DESKTOP-D4T0GAH with PID 21944 (E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU\target\classes started by Jeremy in E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU) 
+2021-04-29 16:50:17 [main] DEBUG itf.hku.backend.BackendApplication : 
+ Running with Spring Boot v2.4.4, Spring v5.3.5 
+2021-04-29 16:50:17 [main] INFO  itf.hku.backend.BackendApplication : 
+ No active profile set, falling back to default profiles: default 
+2021-04-29 16:50:18 [main] INFO  itf.hku.backend.BackendApplication : 
+ Started BackendApplication in 1.66 seconds (JVM running for 2.113) 
+2021-04-29 16:51:41 [main] INFO  itf.hku.backend.BackendApplication : 
+ Starting BackendApplication using Java 1.8.0_275 on DESKTOP-D4T0GAH with PID 23908 (E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU\target\classes started by Jeremy in E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU) 
+2021-04-29 16:51:41 [main] DEBUG itf.hku.backend.BackendApplication : 
+ Running with Spring Boot v2.4.4, Spring v5.3.5 
+2021-04-29 16:51:41 [main] INFO  itf.hku.backend.BackendApplication : 
+ No active profile set, falling back to default profiles: default 
+2021-04-29 16:51:42 [main] INFO  itf.hku.backend.BackendApplication : 
+ Started BackendApplication in 1.608 seconds (JVM running for 2.054) 
+2021-04-29 16:52:09 [main] INFO  itf.hku.backend.BackendApplication : 
+ Starting BackendApplication using Java 1.8.0_275 on DESKTOP-D4T0GAH with PID 4460 (E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU\target\classes started by Jeremy in E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU) 
+2021-04-29 16:52:09 [main] DEBUG itf.hku.backend.BackendApplication : 
+ Running with Spring Boot v2.4.4, Spring v5.3.5 
+2021-04-29 16:52:09 [main] INFO  itf.hku.backend.BackendApplication : 
+ No active profile set, falling back to default profiles: default 
+2021-04-29 16:52:10 [main] INFO  itf.hku.backend.BackendApplication : 
+ Started BackendApplication in 1.68 seconds (JVM running for 2.16) 
+2021-04-29 16:53:09 [main] INFO  itf.hku.backend.BackendApplication : 
+ Starting BackendApplication using Java 1.8.0_275 on DESKTOP-D4T0GAH with PID 17136 (E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU\target\classes started by Jeremy in E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU) 
+2021-04-29 16:53:09 [main] DEBUG itf.hku.backend.BackendApplication : 
+ Running with Spring Boot v2.4.4, Spring v5.3.5 
+2021-04-29 16:53:09 [main] INFO  itf.hku.backend.BackendApplication : 
+ No active profile set, falling back to default profiles: default 
+2021-04-29 16:53:11 [main] INFO  itf.hku.backend.BackendApplication : 
+ Started BackendApplication in 1.632 seconds (JVM running for 2.072) 
+2021-04-29 16:55:46 [main] INFO  itf.hku.backend.BackendApplication : 
+ Starting BackendApplication using Java 1.8.0_275 on DESKTOP-D4T0GAH with PID 24068 (E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU\target\classes started by Jeremy in E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU) 
+2021-04-29 16:55:46 [main] DEBUG itf.hku.backend.BackendApplication : 
+ Running with Spring Boot v2.4.4, Spring v5.3.5 
+2021-04-29 16:55:46 [main] INFO  itf.hku.backend.BackendApplication : 
+ No active profile set, falling back to default profiles: default 
+2021-04-29 16:55:48 [main] INFO  itf.hku.backend.BackendApplication : 
+ Started BackendApplication in 1.689 seconds (JVM running for 2.151) 
+2021-04-29 16:56:02 [main] INFO  itf.hku.backend.BackendApplication : 
+ Starting BackendApplication using Java 1.8.0_275 on DESKTOP-D4T0GAH with PID 3188 (E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU\target\classes started by Jeremy in E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU) 
+2021-04-29 16:56:02 [main] DEBUG itf.hku.backend.BackendApplication : 
+ Running with Spring Boot v2.4.4, Spring v5.3.5 
+2021-04-29 16:56:02 [main] INFO  itf.hku.backend.BackendApplication : 
+ No active profile set, falling back to default profiles: default 
+2021-04-29 16:56:03 [main] INFO  itf.hku.backend.BackendApplication : 
+ Started BackendApplication in 1.661 seconds (JVM running for 2.108) 
+2021-04-29 16:56:20 [main] INFO  itf.hku.backend.BackendApplication : 
+ Starting BackendApplication using Java 1.8.0_275 on DESKTOP-D4T0GAH with PID 22300 (E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU\target\classes started by Jeremy in E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU) 
+2021-04-29 16:56:20 [main] DEBUG itf.hku.backend.BackendApplication : 
+ Running with Spring Boot v2.4.4, Spring v5.3.5 
+2021-04-29 16:56:20 [main] INFO  itf.hku.backend.BackendApplication : 
+ No active profile set, falling back to default profiles: default 
+2021-04-29 16:56:21 [main] INFO  itf.hku.backend.BackendApplication : 
+ Started BackendApplication in 1.659 seconds (JVM running for 2.097) 
+2021-04-29 16:58:12 [main] INFO  itf.hku.backend.BackendApplication : 
+ Starting BackendApplication using Java 1.8.0_275 on DESKTOP-D4T0GAH with PID 23800 (E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU\target\classes started by Jeremy in E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU) 
+2021-04-29 16:58:12 [main] DEBUG itf.hku.backend.BackendApplication : 
+ Running with Spring Boot v2.4.4, Spring v5.3.5 
+2021-04-29 16:58:12 [main] INFO  itf.hku.backend.BackendApplication : 
+ No active profile set, falling back to default profiles: default 
+2021-04-29 16:58:13 [main] INFO  itf.hku.backend.BackendApplication : 
+ Started BackendApplication in 1.952 seconds (JVM running for 2.476) 
+2021-04-29 17:01:32 [main] INFO  itf.hku.backend.BackendApplication : 
+ Starting BackendApplication using Java 1.8.0_275 on DESKTOP-D4T0GAH with PID 22172 (E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU\target\classes started by Jeremy in E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU) 
+2021-04-29 17:01:32 [main] DEBUG itf.hku.backend.BackendApplication : 
+ Running with Spring Boot v2.4.4, Spring v5.3.5 
+2021-04-29 17:01:32 [main] INFO  itf.hku.backend.BackendApplication : 
+ No active profile set, falling back to default profiles: default 
+2021-04-29 17:01:34 [main] INFO  itf.hku.backend.BackendApplication : 
+ Started BackendApplication in 1.65 seconds (JVM running for 2.099) 
+2021-04-29 17:02:50 [main] INFO  itf.hku.backend.BackendApplication : 
+ Starting BackendApplication using Java 1.8.0_275 on DESKTOP-D4T0GAH with PID 23604 (E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU\target\classes started by Jeremy in E:\Working\SpringBoot\backendV2\backendv2_ITF_HKU) 
+2021-04-29 17:02:50 [main] DEBUG itf.hku.backend.BackendApplication : 
+ Running with Spring Boot v2.4.4, Spring v5.3.5 
+2021-04-29 17:02:50 [main] INFO  itf.hku.backend.BackendApplication : 
+ No active profile set, falling back to default profiles: default 
+2021-04-29 17:02:51 [main] INFO  itf.hku.backend.BackendApplication : 
+ Started BackendApplication in 1.657 seconds (JVM running for 2.102) 
